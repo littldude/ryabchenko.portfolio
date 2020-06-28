@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "EBENYA";
+    background-color: #0C1012;
+    color: #F8FBFC;
+}
+
+h1 {
+    display: none;
+}
+
+/*Main Section*/
+
+.section {
+    padding: 5% 2%;
+}
+
+.section__menu {
+    padding: 3% 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 10vw;
+}
+
+.section__link {
+    color: #F8FBFC;
+    opacity: .1;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+.section__link:hover {
+    opacity: 1;
+    transition: .3s linear;
+}
+
+.section__arrow--down {
+    display: flex;
+    justify-content: center;
+    
+    font-size: 2vw;
+    opacity: .3; 
+
+    -webkit-animation: down 1s infinite;
+    -moz-animation: down 1s infinite;
+    -o-animation: down 1s infinite;
+    animation: down 1s infinite;
+}
+
+
+/*About Section*/
+
+.section__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vw;
+}
+
+.text--about {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.2vw;
+}
+
+
+
+/*Portfolio Section*/
+
+
+.porfolio__inner {
+    width: 100%;
+    padding: 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline; 
+}
+
+.portfolio__item {
+    position: relative;
+    padding: 2% 0;
+    width: 49%;
+} 
+
+.portfolio__links {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(-40%, -60%, 0);
+}
+
+.portfolio__link {
+    padding: 0 10px;
+    font-size: 2vw;
+    text-decoration: none;
+    opacity: .8;
+}
+
+.portfolio__img {
+    display: block;
+    background-color: black;
+    width: 90%;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.portfolio__img--img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.portfolio__item:hover .portfolio__img--img {
+    opacity: .1;
+    transition: .2s linear;
+}
+
+.portfolio__item:hover .portfolio__links {
+    opacity: 1;
+}
+
+.title--name {
+    margin-top: 10px;
+    font-size: 2vw;
+}
+
+
+/*Contacts Section*/
+
+.footer__inner {
+    padding: 3% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.email__link {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+.footer__social {
+    display: flex;
+}
+
+.social__link {
+    padding: 5px 10px;
+    font-size: 3vw;
+}
+
+
+@media (max-width: 834px) {
+    /*Main*/
+
+    .section__arrow--down {
+        animation: none;
+    }
+
+    /*About*/
+    .text--about {
+        font-size: 1.4vw;
+    }
+
+    /*Portfolio*/
+
+    .portfolio__img {
+        height: 300px;
+    }
+    
+    .portfolio__img--img {
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 667px) {
+    .text--about {
+        font-size: 1.9vw;
+    } 
+
+    .portfolio__img {
+        height: 200px;
+    }
+    
+    .portfolio__img--img {
+        height: 200px;
+    }
+}
+
+
+
+
+
+/*Animation*/
+
+@-webkit-keyframes {
+    100% {
+        transform: translateY(20px);
+        opacity: 1;
+        transition: 2s;
+    }
+}
+
+@-moz-keyframes down {
+    100% {
+        transform: translateY(20px);
+        opacity: 1;
+        transition: 2s;
+    }
+}
+
+@-o-keyframes down {
+    100% {
+        transform: translateY(20px);
+        opacity: 1;
+        transition: 2s;
+    }
+}
+@keyframes down {
+    100% {
+        transform: translateY(20px);
+        opacity: 1;
+        transition: 2s;
+    }
+}
+
+@font-face {
+    font-family: "EBENYA";
+    src: url("../fonts/EBENYA.ttf");
+    
+}
