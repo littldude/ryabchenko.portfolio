@@ -104,7 +104,7 @@ h1 {
 .portfolio__item {
     position: relative;
     padding: 2% 0;
-    width: 49%;
+    width: 50%;
 } 
 
 .portfolio__links {
@@ -118,10 +118,10 @@ h1 {
 }
 
 .portfolio__link {
-    padding: 0 10px;
+    padding: 0 35px;
     font-size: 2vw;
     text-decoration: none;
-    opacity: .8;
+    opacity: .4;
 }
 
 .portfolio__img {
@@ -180,6 +180,10 @@ h1 {
 }
 
 
+
+
+/*Media*/
+
 @media (max-width: 834px) {
     /*Main*/
 
@@ -201,23 +205,33 @@ h1 {
     .portfolio__img--img {
         height: 300px;
     }
+
+    .portfolio__link {
+        font-size: 2.5vw;
+    }
 }
 
+@media (max-width: 736px) {
 
-@media (max-width: 667px) {
     .text--about {
         font-size: 1.9vw;
     } 
 
-    .portfolio__img {
-        height: 200px;
-    }
-    
-    .portfolio__img--img {
-        height: 200px;
-    }
-}
+    /*Portfolio*/
 
+    .porfolio__inner {
+        flex-direction: column;
+        flex-wrap: no-wrap;
+    }
+
+    .portfolio__item {
+        width: 90%;
+    } 
+
+    .portfolio__link {
+        font-size: 4vw;
+    } 
+}
 
 
 
